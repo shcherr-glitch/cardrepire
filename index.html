@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A precise technical landing page for GPU repair, diagnostics, and validation."
+    />
+    <title>GPU Repair | Diagnostics and Graphics Card Restoration</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand__mark">GPU</span>
+        <span>
+          <strong>Repair Lab</strong>
+          <small>service documentation</small>
+        </span>
+      </a>
+      <nav class="topbar__nav" aria-label="Primary navigation">
+        <a href="#symptoms">Symptoms</a>
+        <a href="#diagnostics">Diagnostics</a>
+        <a href="#workflow">Validation</a>
+      </nav>
+    </header>
+
+    <div class="layout" id="top">
+      <aside class="sidebar" aria-label="Page sections">
+        <div class="sidebar__label">Documentation</div>
+        <a href="#overview">Overview</a>
+        <a href="#symptoms">Symptoms</a>
+        <a href="#diagnostics">Diagnostics</a>
+        <a href="#services">Repair Scope</a>
+        <a href="#workflow">Validation</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#faq">FAQ</a>
+      </aside>
+
+      <main class="content">
+        <section class="hero" id="overview" aria-labelledby="hero-title">
+          <div class="hero__copy">
+            <p class="eyebrow">GPU service protocol / Rev. 24.05</p>
+            <h1 id="hero-title">Graphics card repair for overheating, artifacts, and power failures</h1>
+            <p class="hero__lead">
+              Diagnostics and restoration for graphics cards with a clear technical workflow: from intake inspection
+              to load testing under controlled conditions. No marketing noise, just verifiable steps and transparent
+              repair logic.
+            </p>
+            <div class="hero__actions" aria-label="Quick links">
+              <a class="button button--primary" href="#diagnostics">View diagnostics</a>
+              <a class="button button--secondary" href="#symptoms">Symptom list</a>
+            </div>
+            <dl class="hero__specs" aria-label="Key parameters">
+              <div>
+                <dt>Load test</dt>
+                <dd>VRAM / GPU / VRM</dd>
+              </div>
+              <div>
+                <dt>Report</dt>
+                <dd>Photos + findings</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Fixable / Risk / Stop</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="hero__media">
+            <img
+              src="./assets/images/motherboard-repair-jeshoots.jpg"
+              alt="Bright close-up of a large socket detail on a circuit board"
+            />
+            <figcaption>
+              Photo by
+              <a href="https://unsplash.com/photos/hand-installing-a-computer-processor-onto-a-motherboard-DQBHliTwIaU">JESHOOTS.COM</a>
+              on Unsplash
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section" id="symptoms" aria-labelledby="symptoms-title">
+          <div class="section__header">
+            <p class="eyebrow">01 / Symptoms matrix</p>
+            <h2 id="symptoms-title">When a graphics card should be sent for diagnostics</h2>
+            <p>
+              This table helps separate software issues from symptoms that usually require power measurements,
+              memory testing, and board inspection under magnification.
+            </p>
+          </div>
+
+          <div class="table-wrap" role="region" aria-label="Symptoms table" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symptom</th>
+                  <th>Likely area</th>
+                  <th>Initial check</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Artifacts, colored blocks, or lines</td>
+                  <td>VRAM, GPU, memory solder joints</td>
+                  <td>Memory test, thermal profile</td>
+                  <td><span class="status status--warn">Bench check</span></td>
+                </tr>
+                <tr>
+                  <td>No image while fans spin up</td>
+                  <td>BIOS, core power, PCIe circuits</td>
+                  <td>POST card, voltage rail readings</td>
+                  <td><span class="status status--open">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Shutdown under load</td>
+                  <td>VRM, overheating, power degradation</td>
+                  <td>OCCT/FurMark, current monitoring</td>
+                  <td><span class="status status--critical">Critical</span></td>
+                </tr>
+                <tr>
+                  <td>Noise, overheating, throttling</td>
+                  <td>Cooling system</td>
+                  <td>Disassembly, thermal interface replacement</td>
+                  <td><span class="status status--stable">Routine</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="split section" id="diagnostics" aria-labelledby="diagnostics-title">
+          <div>
+            <p class="eyebrow">02 / Diagnostic protocol</p>
+            <h2 id="diagnostics-title">Diagnostics presented as a technical report</h2>
+            <p>
+              The card is checked in sequence: visual inspection, input resistance measurements, bench startup,
+              thermal imaging, memory testing, and load testing. Repair decisions are made only after measurements.
+            </p>
+            <div class="protocol" aria-label="Diagnostic protocol steps">
+              <article>
+                <span>CHK-01</span>
+                <h3>Intake inspection</h3>
+                <p>Overheating marks, damaged components, connector condition, corrosion, and prior repair traces.</p>
+              </article>
+              <article>
+                <span>CHK-02</span>
+                <h3>Electrical rails</h3>
+                <p>PCIe power, VRM, and resistance measurements for the core, memory, and auxiliary lines.</p>
+              </article>
+              <article>
+                <span>CHK-03</span>
+                <h3>Bench testing</h3>
+                <p>Startup, VRAM testing, driver stability, and repeated load runs under observation.</p>
+              </article>
+            </div>
+          </div>
+
+          <figure class="panel-image">
+            <img
+              src="./assets/images/diagnostics-bench-ricardo-tamayo.jpg"
+              alt="Technicians checking a computer board on a workbench"
+            />
+            <figcaption>
+              Photo by
+              <a href="https://unsplash.com/photos/two-men-working-on-a-computer-motherboard-nApaD08bFAE">Ricardo IV Tamayo</a>
+              on Unsplash
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section" id="services" aria-labelledby="services-title">
+          <div class="section__header">
+            <p class="eyebrow">03 / Repair scope</p>
+            <h2 id="services-title">Typical repair work</h2>
+            <p>
+              The repair scope is based on the diagnostic results: from cooling service to power circuit
+              restoration and confirmed memory work.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article>
+              <span class="code">THERMAL</span>
+              <h3>Cooling service</h3>
+              <p>Heatsink cleaning, thermal paste replacement, thermal pad replacement, and mounting pressure checks.</p>
+            </article>
+            <article>
+              <span class="code">POWER</span>
+              <h3>Power circuits</h3>
+              <p>Diagnostics of the VRM, MOSFETs, controllers, inductors, and input protection components.</p>
+            </article>
+            <article>
+              <span class="code">MEMORY</span>
+              <h3>Video memory</h3>
+              <p>VRAM testing, error localization, and chip replacement when the defect is confirmed.</p>
+            </article>
+            <article>
+              <span class="code">SIGNAL</span>
+              <h3>Connectors and signals</h3>
+              <p>Checks of HDMI/DP ports, PCIe contacts, control lines, and damaged board traces.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="split section section--dark" id="workflow" aria-labelledby="workflow-title">
+          <figure class="panel-image panel-image--flush">
+            <img
+              src="./assets/images/gpu-circuit-board-brecht-corbeel.jpg"
+              alt="Close-up of a graphics card circuit board"
+            />
+            <figcaption>
+              Photo by
+              <a href="https://unsplash.com/photos/a-close-up-of-a-computer-circuit-board-CotoLQMXo_Y">Brecht Corbeel</a>
+              on Unsplash
+            </figcaption>
+          </figure>
+
+          <div>
+            <p class="eyebrow">04 / Validation</p>
+            <h2 id="workflow-title">What we check after repair</h2>
+            <ol class="checklist">
+              <li>
+                <strong>Cold start.</strong>
+                Startup after full power drain and system detection check.
+              </li>
+              <li>
+                <strong>Temperatures.</strong>
+                Core, memory, hotspot, and VRM zones are monitored under load.
+              </li>
+              <li>
+                <strong>Stability.</strong>
+                A series of stress tests, memory tests, and checks for recurring artifacts.
+              </li>
+              <li>
+                <strong>Final report.</strong>
+                Completed work, remaining risks, and usage recommendations are documented.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section" id="timeline" aria-labelledby="timeline-title">
+          <div class="section__header">
+            <p class="eyebrow">05 / Timing</p>
+            <h2 id="timeline-title">Estimated turnaround by task type</h2>
+          </div>
+
+          <div class="timeline">
+            <article>
+              <span>Day 0</span>
+              <h3>Primary diagnostics</h3>
+              <p>Inspection, measurements, bench startup, and preliminary findings.</p>
+            </article>
+            <article>
+              <span>Day 1-2</span>
+              <h3>Routine repair</h3>
+              <p>Cooling service, connectors, and common power components when parts are available.</p>
+            </article>
+            <article>
+              <span>Day 3+</span>
+              <h3>Complex recovery</h3>
+              <p>VRAM faults, trace damage, repeated validation, and compatible chip selection.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section faq" id="faq" aria-labelledby="faq-title">
+          <div class="section__header">
+            <p class="eyebrow">06 / FAQ</p>
+            <h2 id="faq-title">Short answers to common questions</h2>
+          </div>
+
+          <details>
+            <summary>Can the repair cost be estimated in advance?</summary>
+            <p>
+              An accurate estimate is given after diagnostics. Before measurements, only a range is possible:
+              cooling service is usually simpler, while power and memory issues require bench testing.
+            </p>
+          </details>
+          <details>
+            <summary>Is a card used for mining worth repairing?</summary>
+            <p>
+              Yes, if the board has no critical GPU damage or multiple cascading defects. The decision depends on
+              memory condition, power circuits, and the cooling system.
+            </p>
+          </details>
+          <details>
+            <summary>Why not replace only the thermal paste?</summary>
+            <p>
+              Overheating is often a symptom, not the root cause. Mounting pressure, thermal pads, fan speed, and
+              power stability also need to be checked.
+            </p>
+          </details>
+        </section>
+
+        <section class="closing" aria-label="Page closing">
+          <div>
+            <p class="eyebrow">Ready for inspection</p>
+            <h2>Measurements first. Repair second.</h2>
+          </div>
+          <a class="button button--primary" href="#diagnostics">Open the protocol</a>
+        </section>
+
+        <footer class="footer">
+          <figure>
+            <img
+              src="./assets/images/macro-chips-jakub-pabis.jpg"
+              alt="Macro photo of chips on a circuit board"
+            />
+            <figcaption>
+              Photo by
+              <a href="https://unsplash.com/photos/close-up-of-computer-circuit-board-with-many-chips-hI08TetYw0g">Jakub Pabis</a>
+              on Unsplash
+            </figcaption>
+          </figure>
+          <p>GPU Repair Lab. Static landing page without a request form or contact details.</p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
